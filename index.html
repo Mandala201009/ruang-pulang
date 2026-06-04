@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruang Pulang</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#eef2ff,#f8fafc);
+padding:30px 15px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
+}
+
+h1{
+text-align:center;
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#64748b;
+margin-bottom:30px;
+line-height:1.8;
+}
+
+.section{
+margin-bottom:30px;
+}
+
+.question{
+font-weight:600;
+margin-bottom:10px;
+font-size:1.05rem;
+}
+
+textarea,
+input,
+select{
+width:100%;
+padding:14px;
+border:1px solid #d1d5db;
+border-radius:12px;
+outline:none;
+font-size:14px;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:12px;
+background:#2563eb;
+color:white;
+font-size:16px;
+cursor:pointer;
+font-weight:600;
+}
+
+button:hover{
+opacity:.9;
+}
+
+.quote{
+background:#f8fafc;
+padding:20px;
+border-left:5px solid #2563eb;
+border-radius:10px;
+margin-bottom:30px;
+color:#475569;
+}
+
+.success{
+display:none;
+margin-top:20px;
+padding:15px;
+background:#dcfce7;
+color:#166534;
+border-radius:12px;
+text-align:center;
+font-weight:600;
+}
+</style></head><body><div class="container"><h1>🌙 Ruang Pulang</h1><p class="subtitle">
+Tidak perlu menuliskan nama.
+Tidak ada yang akan dihakimi.
+Tulis apa yang benar-benar ingin kamu sampaikan kepada keluarga angkatan ini.
+</p><div class="quote">
+"Kadang yang membuat kita jauh bukan kebencian, tetapi banyak hal yang tidak pernah sempat diucapkan."
+</div><form id="form"><div class="section">
+<div class="question">
+1. Saat mendengar kata "OSIS", apa yang pertama kali kamu rasakan?
+</div>
+<select required>
+<option value="">Pilih</option>
+<option>Bangga</option>
+<option>Bahagia</option>
+<option>Biasa saja</option>
+<option>Lelah</option>
+<option>Kecewa</option>
+<option>Sedih</option>
+<option>Bingung</option>
+</select>
+</div><div class="section">
+<div class="question">
+2. Kapan terakhir kali kamu merasa benar-benar dekat dengan teman-teman angkatan ini?
+</div>
+<textarea required></textarea>
+</div><div class="section">
+<div class="question">
+3. Menurutmu, apa yang berubah hingga hubungan kita tidak sedekat dulu?
+</div>
+<textarea required></textarea>
+</div><div class="section">
+<div class="question">
+4. Apa yang selama ini ingin kamu sampaikan tetapi belum pernah berani kamu katakan?
+</div>
+<textarea required></textarea>
+</div><div class="section">
+<div class="question">
+5. Apakah ada hal yang sedang kamu hadapi akhir-akhir ini yang mungkin tidak diketahui teman-teman?
+</div>
+<textarea></textarea>
+</div><div class="section">
+<div class="question">
+6. Siapa orang yang paling ingin kamu ucapkan terima kasih di angkatan ini?
+</div>
+<textarea></textarea>
+</div><div class="section">
+<div class="question">
+7. Apakah ada hal yang kamu sesali selama perjalanan kita bersama?
+</div>
+<textarea></textarea>
+</div><div class="section">
+<div class="question">
+8. Jika bisa mengulang waktu, apa yang ingin kamu perbaiki?
+</div>
+<textarea></textarea>
+</div><div class="section">
+<div class="question">
+9. Tulis pesan anonim untuk seseorang di angkatan ini.
+</div>
+<textarea></textarea>
+</div><div class="section">
+<div class="question">
+10. Tulis surat untuk angkatan kita.
+</div>
+<textarea style="min-height:250px" required></textarea>
+</div><div class="section">
+<div class="question">
+11. Apa harapanmu untuk hubungan kita setelah kegiatan ini?
+</div>
+<textarea required></textarea>
+</div><button type="submit">
+Kirim Cerita 💙
+</button><div class="success" id="success">
+Terima kasih telah berbagi cerita. Semoga ruang ini menjadi langkah kecil untuk saling memahami kembali.
+</div></form></div><script>
+document.getElementById("form")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+document.getElementById("success").style.display="block";
+
+this.reset();
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+});
+</script></body>
+  </html>
